@@ -10,14 +10,12 @@ import { mq } from "./utils";
 
 const containerStyles = css(
   mq({
-    margin: ["20px 10px", "20px 20px", "20px 20px", "20px 20px", "20px auto"],
-    backgroundColor: ["#efefef", "#ececec", "#ebebeb", "#e9e9e9", "#e7e7e7"]
+    margin: ["20px 10px", "20px 20px", "20px 20px", "20px 20px", "20px auto"]
   })
 );
 
 const MainContainer = styled("div")`
   max-width: 1160px;
-  background-color: #efefef;
 `;
 
 class App extends Component {
@@ -25,10 +23,10 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          <Link to="/home">Home</Link> <Link to="/article">Article</Link>
+          <Link to="/module">Module</Link> <Link to="/card">Card</Link>
         </nav>
         <MainContainer className={containerStyles}>
-          <Route path="/" component={Home} />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/module" component={ModuleDemo} />
           <Route path="/card" component={CardDemo} />
         </MainContainer>

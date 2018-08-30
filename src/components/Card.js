@@ -11,12 +11,11 @@ const styles = css(
 );
 
 const CardContainer = styled("div")`
-  border: 1px solid #ccc;
   overflow: hidden;
   min-height: 48px;
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  border: 1px solid #c7c;
 `;
 
 class Card extends React.Component {
