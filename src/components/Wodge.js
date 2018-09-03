@@ -19,12 +19,13 @@ const CardContainer = styled("div")`
   border-radius: 2px;
   height: 100%;
   width: 100%;
-  background: #89ddff77;
-  border: 1px solid #89ddff;
+  background: #c792ea77;
+  border: 1px solid #c792ea;
 `;
 
-class Card extends React.Component {
+class Wodge extends React.Component {
   render() {
+    console.log("Card rendered");
     return (
       <CardContainer>
         <Sizer
@@ -38,9 +39,9 @@ class Card extends React.Component {
           render={size => {
             return (
               <div className={styles}>
-                <h4>Card</h4>
+                <h4>Wodge</h4>
                 {this.props.children}
-                <p>Card size: {size.toUpperCase()}</p>
+                {/* <p>Card size: {size}</p> */}
               </div>
             );
           }}
@@ -50,4 +51,4 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default Wodge;
